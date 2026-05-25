@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Controller</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Spotify Controller</h1>
+      <a class="btn btn-secondary" href="#" id="login-link">Log in with Spotify</a>
+    </header>
+
+    <p class="status" id="status" role="status">Log in, then start playback in the Spotify app.</p>
+
+    <section class="now-playing" id="now-playing" hidden>
+      <img class="cover" id="cover" alt="" />
+      <div class="track-info">
+        <h2 id="track-name">—</h2>
+        <p id="track-artists">—</p>
+        <p class="album" id="track-album">—</p>
+        <div class="progress-wrap">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p class="time" id="track-time">0:00 / 0:00</p>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button type="button" class="btn control" id="btn-previous" title="Previous">⏮</button>
+      <button type="button" class="btn control btn-primary" id="btn-play-pause" title="Play" aria-label="Play">▶</button>
+      <button type="button" class="btn control" id="btn-next" title="Next">⏭</button>
+    </section>
+
+    <button type="button" class="btn btn-secondary refresh" id="btn-refresh">Refresh now playing</button>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
