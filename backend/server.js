@@ -8,6 +8,11 @@ const port = process.env.PORT || 5000;
 const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 app.use(cors({ origin: frontendUrl }));
+
+app.get('/health', (req, res) => {
+  res.json({ ok: true });
+});
+
 app.use('/auth', require('./routes/authRoutes'));
 app.use('/player', require('./routes/playerRoutes'));
 
